@@ -1,6 +1,6 @@
 # fsm.ai
 
-[![Gitter](https://badges.gitter.im/fsm-ai/fsm.ai)](https://gitter.im/fsm-ai/fsm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/fsm-ai/fsm.ai.svg)](https://gitter.im/fsm-ai/fsm.ai?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![NPM Version](https://img.shields.io/npm/v/fsm.ai.svg)](https://www.npmjs.com/package/fsm.ai)
 
 ## Installation
