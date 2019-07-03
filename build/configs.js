@@ -5,7 +5,7 @@ const resolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
 const version = process.env.VERSION || require("../package.json").version;
 const banner = `/**
- * fsm.svg v${version}
+ * fsm.ai v${version}
  * (c) ${new Date().getFullYear()} Pengfei Wang
  * @license MIT
  */`;
@@ -15,24 +15,24 @@ const path_resolve = _path => path.resolve(__dirname, "../", _path);
 const configs = {
 	umdDev: {
 		input: path_resolve("src/index.js"),
-		file: path_resolve("dist/fsm-svg.js"),
+		file: path_resolve("dist/fsm-ai.js"),
 		format: "umd",
 		env: "development"
 	},
 	umdProd: {
 		input: path_resolve("src/index.js"),
-		file: path_resolve("dist/fsm-svg.min.js"),
+		file: path_resolve("dist/fsm-ai.min.js"),
 		format: "umd",
 		env: "production"
 	},
 	commonjs: {
 		input: path_resolve("src/index.js"),
-		file: path_resolve("dist/fsm-svg.common.js"),
+		file: path_resolve("dist/fsm-ai.common.js"),
 		format: "cjs"
 	},
 	esm: {
 		input: path_resolve("src/index.esm.js"),
-		file: path_resolve("dist/fsm-svg.esm.js"),
+		file: path_resolve("dist/fsm-ai.esm.js"),
 		format: "esm"
 	}
 };

@@ -1,12 +1,12 @@
-# fsm.svg
+# fsm.ai
 
 [![Gitter](https://badges.gitter.im/fsm-ai/fsm.ai)](https://gitter.im/fsm-ai/fsm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![NPM Version](https://img.shields.io/npm/v/fsm.ai.svg)](https://www.npmjs.com/package/fsm.svg)
+[![NPM Version](https://img.shields.io/npm/v/fsm.ai.svg)](https://www.npmjs.com/package/fsm.ai)
 
 ## Installation
 
 ```
-$ npm install fsm.svg
+$ npm install fsm.ai
 ```
 
 ## Load
@@ -20,7 +20,7 @@ $ npm install fsm.svg
 ### ES6
 
 ```js
-import FsmAI from "fsm.svg";
+import FsmAI from "fsm.ai";
 ```
 
 ## Usage
@@ -28,7 +28,8 @@ import FsmAI from "fsm.svg";
 > in your file
 
 ```javascript
-var fsm = FsmAI.init("#flow");
+var fsm = FsmAI.init("input");
+fsm.setOption({});
 ```
 
 ## License
