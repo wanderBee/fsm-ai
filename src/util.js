@@ -44,3 +44,65 @@ export function forEachValue(obj, fn) {
 export function assert(condition, msg) {
 	if (!condition) throw new Error(`[fsm.ai] ${msg}`);
 }
+
+export function binarySearch(array, key) {
+	if (!Array.isArray(array)) {
+		return -1;
+	}
+	var begin = 0;
+	var end = array.length - 1;
+	while (begin <= end) {
+		var mid = begin + (end - begin) / 2;
+		if (array[mid] > key) {
+			end = mid - 1;
+		} else if (array[mid] < key) {
+			begin = mid + 1;
+		} else {
+			return mid;
+		}
+	}
+	return -1;
+}
+
+export function fuzzyMatching(array, fuzzy) {
+	if (!Array.isArray(array)) {
+		return [];
+	}
+	if (fuzzy === "") {
+		return array;
+	}
+
+	let matchingArr = [];
+	for (var i = 0; i < array.length; i++) {
+		if (typeof fuzzy === "string") {
+			let _find = new RegExp(fuzzy).exec(array[i]);
+			if (_find != null && _find.index > -1) {
+				matchingArr.push(array[i]);
+			}
+		}
+	}
+	return matchingArr;
+}
+
+export function addEventListener(elem, eventName, handler) {
+	if (elem.addEventListener) {
+		// IE9以下不兼容
+		elem.addEventListener(eventName, handler, false);
+	} else if (elem.attachEvent) {
+		//IE独有
+		elem.attachEvent("on" + eventName, handler);
+	} else {
+		elem["on" + type] = handler; //一个元素只能绑定一个处理程序
+	}
+}
+export function removeEventListener(elem, eventName, handler) {
+	if (elem.removeEventListener) {
+		//addEventListener
+		elem.removeEventListener(eventName, handler, false);
+	} else if (elem.detachEvent) {
+		//attachEvent
+		elem.detachEvent("on" + eventName, handler);
+	} else {
+		elem["on" + type] = null;
+	}
+}
