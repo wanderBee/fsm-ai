@@ -28,8 +28,20 @@ import FsmAI from "fsm.ai";
 > in your file
 
 ```javascript
-var fsm = FsmAI.init("input");
-fsm.setOption({});
+// auto-complete
+FsmAI.intellisense("#demo", {
+	data: [
+		"normal",
+		"error",
+		"warning",
+		"problematic",
+		"exit",
+		"entrance",
+		"talk",
+		"insurance",
+		"save and protect"
+	]
+});
 ```
 
 ## License

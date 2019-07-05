@@ -1,6 +1,6 @@
 import ai from "fsm.ai";
 
-ai.intellisense("#demo", {
+ai.intellisense("#demo2", {
 	data: [
 		"normal",
 		"error",
