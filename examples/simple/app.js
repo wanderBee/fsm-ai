@@ -1,4 +1,15 @@
-import FsmAI from "fsm.ai";
+import ai from "fsm.ai";
 
-var fsm = FsmAI.init("#demo");
-fsm.setOption();
+ai.intellisense("#demo", {
+	data: [
+		"normal",
+		"error",
+		"warning",
+		"problematic",
+		"exit",
+		"entrance",
+		"talk",
+		"insurance",
+		"save and protect"
+	]
+});

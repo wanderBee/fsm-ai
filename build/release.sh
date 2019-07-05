@@ -18,6 +18,9 @@ then
   echo "Enter commit message:"
   read MSG
 
+  read -p "press any key to continue..." -n 1 -r
+  echo    # (optional) move to a new line
+
   npm version $VERSION
   git add .
   git commit -m "$MSG"
