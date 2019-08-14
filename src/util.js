@@ -92,7 +92,7 @@ export function addEventListener(elem, eventName, handler) {
 		//IE独有
 		elem.attachEvent("on" + eventName, handler);
 	} else {
-		elem["on" + type] = handler; //一个元素只能绑定一个处理程序
+		elem["on" + eventName] = handler; //一个元素只能绑定一个处理程序
 	}
 }
 export function removeEventListener(elem, eventName, handler) {
